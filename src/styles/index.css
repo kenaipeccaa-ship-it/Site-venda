@@ -519,6 +519,22 @@
     transform: translateY(16px) scale(0.975);
   }
 
+  /* ------------------------------------------------------------------
+     FAIXA ROLANTE (marquee) DO HERO
+     ------------------------------------------------------------------
+     Duas cópias idênticas do mesmo grupo deslizam de 0 a -50%: quando a
+     primeira sai de cena, a segunda está exatamente na posição inicial,
+     e o laço fica contínuo, sem salto.
+
+     `flex: none` em todos os níveis é o ponto crítico. A trilha é mais
+     larga que a tela por natureza; sem isso o flex-shrink a comprime até
+     caber, os itens ficam menores que o próprio texto e as palavras se
+     sobrepõem (era exatamente esse o bug).
+
+     O ritmo é uniforme porque TODO espaçamento usa o mesmo --marquee-gap:
+     entre a palavra e o losango, entre um item e o próximo, e também na
+     emenda entre as duas cópias (via padding-right do grupo).
+     ------------------------------------------------------------------ */
   @keyframes marquee {
     from {
       transform: translateX(0);
@@ -528,10 +544,45 @@
     }
   }
 
+  .marquee-viewport {
+    overflow: hidden;
+  }
+
   .marquee-track {
+    --marquee-gap: 1.5rem;
+    --marquee-duration: 32s;
     display: flex;
     width: max-content;
-    animation: marquee 32s linear infinite;
+    flex: none;
+    will-change: transform;
+    animation: marquee var(--marquee-duration) linear infinite;
+  }
+
+  .marquee-group {
+    display: flex;
+    flex: none;
+    align-items: center;
+    gap: var(--marquee-gap);
+    /* repete o mesmo gap depois do último item, para que a emenda entre as
+       duas cópias tenha exatamente o mesmo respiro dos demais intervalos */
+    padding-right: var(--marquee-gap);
+    /* rede de segurança: se a lista de palavras encurtar, o grupo ainda
+       cobre a tela e o laço nunca mostra um vão vazio */
+    min-width: 100vw;
+  }
+
+  .marquee-item {
+    display: flex;
+    flex: none;
+    align-items: center;
+    gap: var(--marquee-gap);
+  }
+
+  @media (min-width: 640px) {
+    .marquee-track {
+      --marquee-gap: 2.25rem;
+      --marquee-duration: 42s;
+    }
   }
 
   @keyframes softPulse {
@@ -746,6 +797,12 @@
     }
     .reveal {
       opacity: 1 !important;
+      transform: none !important;
+    }
+    /* precisa de !important para vencer a regra universal acima, que
+       congelaria a faixa no fim da animação (translateX(-50%)) */
+    .marquee-track {
+      animation: none !important;
       transform: none !important;
     }
   }

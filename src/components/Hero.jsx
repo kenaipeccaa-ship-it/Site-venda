@@ -128,15 +128,14 @@ export function Hero() {
 
       {/* ---------- Faixa rolante ---------- */}
       <div className="relative border-y border-line bg-ink-2/70 backdrop-blur-sm">
-        <div className="flex overflow-hidden py-3.5 sm:py-4">
+        <div className="marquee-viewport py-3.5 sm:py-4">
           <div className="marquee-track">
+            {/* Cópia 1 é a que os leitores de tela anunciam; a 2 só existe
+                para fechar o laço visual e fica marcada como decorativa. */}
             {[0, 1].map((copy) => (
-              <ul key={copy} className="flex items-center" aria-hidden={copy === 1}>
+              <ul key={copy} className="marquee-group" aria-hidden={copy === 1}>
                 {MARQUEE_ITEMS.map((item) => (
-                  <li
-                    key={`${copy}-${item.key}`}
-                    className="flex items-center gap-5 px-5 sm:gap-7 sm:px-7"
-                  >
+                  <li key={`${copy}-${item.key}`} className="marquee-item">
                     <span className="font-display text-[0.78rem] font-bold tracking-[0.26em] whitespace-nowrap text-[#dfe4ea] uppercase sm:text-[0.92rem]">
                       {item.word}
                     </span>
