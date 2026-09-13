@@ -1,6 +1,6 @@
 # Exclusive Academia — site institucional
 
-Site da **Exclusive Academia**, na Cidade Satélite Íris, Campinas — SP.
+Site da **Exclusive Academia**, no Campo Grande, Campinas — SP.
 React + TypeScript + Vite, CSS moderno (CSS Modules), sem bibliotecas de UI.
 
 ---

@@ -30,7 +30,7 @@ export const brand = {
   full: 'Exclusive Academia',
   city: 'Campinas',
   state: 'SP',
-  neighborhood: 'Cidade Satélite Íris',
+  neighborhood: 'Campo Grande',
 } as const
 
 export interface Contact {
@@ -46,12 +46,12 @@ export interface Contact {
 export const contact: Contact = {
   /** ✅ CONFIRMADO — endereço informado pela academia */
   street: 'Rua Álvaro Silveira Leite, 25',
-  neighborhood: 'Cidade Satélite Íris',
+  neighborhood: 'Campo Grande',
   city: 'Campinas — SP',
   /** Link do Google Maps montado a partir do endereço acima. */
   mapsUrl:
     'https://www.google.com/maps/search/?api=1&query=' +
-    encodeURIComponent('Rua Álvaro Silveira Leite, 25 - Cidade Satélite Íris, Campinas - SP'),
+    encodeURIComponent('Rua Álvaro Silveira Leite, 25 - Campo Grande, Campinas - SP'),
   /** ⚠️ EDITAR — telefone fixo, se houver. Deixe '' para não exibir. */
   phone: '',
   /** ⚠️ EDITAR — perfil do Instagram. Deixe '' para não exibir. */
