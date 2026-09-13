@@ -1,0 +1,213 @@
+/* A loja tem uma identidade própria dentro do mesmo sistema:
+   fundo mais claro que as seções da academia, para se destacar como
+   uma área à parte, mantendo a paleta e a tipografia do site. */
+.section {
+  background: var(--navy-800);
+  border-block: 1px solid var(--hairline);
+}
+
+/* ---------- Destaque ---------- */
+/* O título ocupa a linha inteira: assim "Sua suplementação." cabe na mesma
+   linha a partir de 768px, mantendo as três linhas do conceito. */
+.intro {
+  display: grid;
+  gap: 28px;
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+@media (min-width: 900px) {
+  .intro {
+    gap: 40px;
+  }
+}
+
+.title {
+  color: var(--white);
+}
+
+.introText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .introText {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) auto;
+    align-items: center;
+    gap: 40px;
+    padding-top: 8px;
+    border-top: 1px solid var(--hairline);
+  }
+}
+
+.subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2.4vw, 1.15rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--white);
+}
+
+.lead {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 48ch;
+}
+
+/* ---------- Barra de ferramentas ---------- */
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-bottom: 22px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+@media (min-width: 900px) {
+  .toolbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cartBtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 11px 16px;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 2px;
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: border-color 0.3s var(--ease), background-color 0.3s var(--ease);
+}
+
+.cartBtn:hover {
+  border-color: var(--accent);
+  background: rgba(23, 105, 255, 0.14);
+}
+
+.cartLabel {
+  display: none;
+}
+
+@media (min-width: 420px) {
+  .cartLabel {
+    display: inline;
+  }
+}
+
+.cartCount {
+  display: grid;
+  place-items: center;
+  min-width: 20px;
+  height: 20px;
+  padding-inline: 5px;
+  border-radius: 2px;
+  background: var(--accent);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--white);
+}
+
+/* ---------- Vitrine ----------
+   2 colunas já no celular (os cards são compactos o bastante),
+   subindo para 3 e 4 colunas conforme a largura. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+.cell {
+  min-width: 0;
+  display: flex;
+}
+
+.cell > * {
+  width: 100%;
+}
+
+/* ---------- Estado vazio ---------- */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: clamp(40px, 7vw, 72px) 20px;
+  border: 1px dashed var(--hairline-strong);
+  border-radius: 2px;
+  text-align: center;
+}
+
+.emptyTitle {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.emptyText {
+  font-size: 0.9rem;
+  color: var(--muted);
+  max-width: 40ch;
+}
+
+/* ---------- Aviso ---------- */
+.disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 18px;
+  border: 1px solid var(--hairline);
+  border-left: 2px solid var(--accent);
+  border-radius: 2px;
+}
+
+.disclaimer p {
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 78ch;
+}
+
+.disclaimerIcon {
+  flex: none;
+  margin-top: 2px;
+  color: var(--accent-bright);
+}

@@ -114,17 +114,92 @@ reservado discreto em vez de uma imagem quebrada.
 
 ---
 
+## Exclusive Store (loja de suplementos)
+
+Área de loja integrada ao site, na seção **09 — Exclusive Store** (`#loja`),
+com vitrine, filtros por categoria, busca, detalhe do produto, carrinho e
+fechamento de pedido pelo WhatsApp. **Não há checkout nem pagamento online**,
+e nenhum dado bancário é solicitado ou armazenado.
+
+### Onde mexer
+
+Tudo fica em **`src/data/products.ts`**.
+
+| O quê | Onde |
+| --- | --- |
+| **Cadastrar produto** | acrescente um item em `products` |
+| **Alterar preço** | troque `price: null` por um número (`price: 189.9`) |
+| **Trocar imagem** | ponha o arquivo em `public/images/store/` e ajuste `image` |
+| **Marcar como esgotado** | `available: false` |
+| **Adicionar/remover categoria** | edite a lista `categories` |
+| **Número do WhatsApp** | `WHATSAPP_NUMBER`, em `src/config/site.ts` (o mesmo do site) |
+| **Mensagens do WhatsApp** | `waMessages.store`, `.product()` e `.orderIntro`, em `src/config/site.ts` |
+
+Exemplo de produto novo:
+
+```ts
+{
+  id: 'whey-3w',                       // único, sem espaços nem acentos
+  name: 'Whey 3W',
+  category: 'whey',                    // um dos ids em `categories`
+  description: 'Texto curto e neutro.',
+  image: '/images/store/whey-3w.jpg',
+  price: null,                         // null = "Sob consulta"
+  available: true,                     // false = "INDISPONÍVEL"
+}
+```
+
+A vitrine, os contadores dos filtros, a busca, o modal e o carrinho se
+ajustam sozinhos — nenhum componente precisa ser alterado.
+
+### Preços
+
+Nenhum valor foi informado, então **todos os produtos estão como
+`price: null`** e aparecem como *"Sob consulta"*. O carrinho soma apenas os
+itens com preço cadastrado e avisa quando o subtotal é parcial.
+
+Ao trocar um `null` por um número, o valor passa a ser formatado
+automaticamente (R$ 189,90) no card, no modal, no carrinho e na mensagem de
+pedido do WhatsApp.
+
+### Imagens
+
+Os arquivos em `public/images/store/` são **ilustrações provisórias** geradas
+para o desenvolvimento — não são fotos reais nem de marca alguma. Substitua
+cada arquivo mantendo o nome, ou ajuste o caminho em `products.ts`.
+
+### Arquivos da loja
+
+```
+src/data/products.ts              ← ⭐ catálogo (edite só isto)
+src/hooks/useCart.ts              estado do carrinho
+src/components/store/
+  StoreSection.tsx                destaque + barra de ferramentas + vitrine
+  ProductCard.tsx                 card do produto
+  ProductModal.tsx                detalhe do produto
+  ProductFilters.tsx              filtros por categoria
+  SearchProducts.tsx              busca
+  Cart.tsx                        painel do carrinho
+  CartItem.tsx                    linha do carrinho
+public/images/store/              imagens dos produtos
+```
+
+---
+
 ## Estrutura do projeto
 
 ```
 src/
 ├─ config/site.ts            ← ⭐ configuração central (edite só isto)
+├─ data/products.ts          ← ⭐ catálogo da loja
 ├─ lib/whatsapp.ts           monta os links wa.me a partir de UMA constante
 ├─ hooks/                    reveal, trava de scroll, seção ativa, header
 ├─ styles/global.css         tokens, reset e primitivos (botões, títulos)
 ├─ assets/fonts/             Space Grotesk + Manrope auto-hospedadas
 └─ components/
    ├─ ui/                    Figure · Reveal · Icon · Lightbox
+   ├─ store/                 StoreSection · ProductCard · ProductModal
+   │                         ProductFilters · SearchProducts · Cart · CartItem
    ├─ Header · Hero · ImpactSection · About · Modalities
    ├─ Gallery · Differentials · Plans · TrialCTA
    └─ Location · Hours · Footer · WhatsAppButton

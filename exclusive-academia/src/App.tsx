@@ -10,6 +10,7 @@ import { Plans } from './components/Plans'
 import { TrialCTA } from './components/TrialCTA'
 import { Location } from './components/Location'
 import { Hours } from './components/Hours'
+import { StoreSection } from './components/store/StoreSection'
 import { Footer } from './components/Footer'
 import { WhatsAppButton } from './components/WhatsAppButton'
 
@@ -32,6 +33,7 @@ export default function App() {
         <TrialCTA />
         <Location />
         <Hours />
+        <StoreSection />
       </main>
 
       <Footer />

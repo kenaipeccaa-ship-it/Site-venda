@@ -257,6 +257,14 @@ export const waMessages = {
   trial: 'Olá! Gostaria de saber mais sobre a aula experimental da Exclusive Academia.',
   location: 'Olá! Gostaria de confirmar a localização da Exclusive Academia.',
   hours: 'Olá! Gostaria de confirmar os horários de funcionamento da Exclusive Academia.',
+
+  /* ---- Exclusive Store ---- */
+  store: 'Olá! Gostaria de saber mais sobre os produtos da Exclusive Store.',
+  /** Mensagem do botão "Comprar pelo WhatsApp", no detalhe do produto. */
+  product: (name: string) =>
+    `Olá! Tenho interesse no produto ${name}. Gostaria de saber mais informações e disponibilidade.`,
+  /** Abertura da mensagem de pedido do carrinho; os itens entram logo abaixo. */
+  orderIntro: 'Olá! Gostaria de fazer um pedido na Exclusive Store:',
 } as const
 
 /* ----------------------------------------------------------------------------
@@ -275,6 +283,7 @@ export const navLinks: NavLink[] = [
   { label: 'Planos', href: '#planos' },
   { label: 'Aula experimental', href: '#experimental' },
   { label: 'Localização', href: '#localizacao' },
+  { label: 'Loja', href: '#loja' },
 ]
 
 /* ----------------------------------------------------------------------------

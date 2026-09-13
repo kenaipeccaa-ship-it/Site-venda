@@ -22,6 +22,12 @@ export type IconName =
   | 'clock'
   | 'check'
   | 'expand'
+  | 'search'
+  | 'cart'
+  | 'plus'
+  | 'minus'
+  | 'trash'
+  | 'info'
 
 const paths: Record<IconName, ReactElement> = {
   // Ambiente climatizado — floco de neve
@@ -90,6 +96,34 @@ const paths: Record<IconName, ReactElement> = {
   ),
   check: <path d="m4.5 12.5 5 5 10-11" />,
   expand: <path d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5" />,
+  search: (
+    <>
+      <circle cx="10.8" cy="10.8" r="6.6" />
+      <path d="m15.6 15.6 4.2 4.2" />
+    </>
+  ),
+  cart: (
+    <>
+      <path d="M2.6 3.4h2.6l2.3 10.6h9.4l2.1-7.6H6.4" />
+      <circle cx="9.4" cy="19" r="1.5" />
+      <circle cx="16.8" cy="19" r="1.5" />
+    </>
+  ),
+  info: (
+    <>
+      <circle cx="12" cy="12" r="8.6" />
+      <path d="M12 11v5.4M12 7.9h.01" />
+    </>
+  ),
+  plus: <path d="M12 5.5v13M5.5 12h13" />,
+  minus: <path d="M5.5 12h13" />,
+  trash: (
+    <>
+      <path d="M4 6.4h16M9.4 6.4V4.2h5.2v2.2" />
+      <path d="M6.2 6.4 7 20h10l.8-13.6" />
+      <path d="M10.4 10.2v6M13.6 10.2v6" />
+    </>
+  ),
 }
 
 interface IconProps extends Omit<SVGProps<SVGSVGElement>, 'name'> {
