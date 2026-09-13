@@ -52,7 +52,7 @@ export function WhatsAppButton() {
           style={{ animation: 'fadeUpIn .28s var(--ease-out-soft) both' }}
         >
           <div className="flex items-center gap-3 border-b border-line bg-white/[0.03] p-4">
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-volt text-[#0a0f02]">
+            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand text-white">
               <WhatsAppIcon size={18} />
             </span>
             <div className="min-w-0">
@@ -70,7 +70,7 @@ export function WhatsAppButton() {
                   href={waLink(atalho.message)}
                   {...waAnchorProps}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-between gap-3 rounded-xl px-3 py-3 text-[0.86rem] text-[#c3cbd6] transition-colors hover:bg-volt/10 hover:text-volt"
+                  className="flex items-center justify-between gap-3 rounded-xl px-3 py-3 text-[0.86rem] text-[#c3cbd6] transition-colors hover:bg-brand-light/10 hover:text-brand-light"
                 >
                   <span>{atalho.label}</span>
                   <WhatsAppIcon size={15} />
@@ -82,7 +82,7 @@ export function WhatsAppButton() {
           {WHATSAPP_IS_PLACEHOLDER && (
             <p className="border-t border-line px-4 py-3 text-[0.68rem] leading-relaxed text-fog">
               Demonstração: o número de WhatsApp é um <strong>placeholder</strong>. Substitua a
-              variável <code className="text-volt/90">WHATSAPP_NUMBER</code> pelo contato oficial.
+              variável <code className="text-brand-light/90">WHATSAPP_NUMBER</code> pelo contato oficial.
             </p>
           )}
         </div>
@@ -95,7 +95,7 @@ export function WhatsAppButton() {
         aria-expanded={painelAberto}
         aria-controls="wa-atalhos"
         aria-label={painelAberto ? 'Fechar atalhos do WhatsApp' : 'Abrir atalhos do WhatsApp'}
-        className="group flex items-center gap-2.5 rounded-full bg-volt py-3.5 pr-4 pl-4 font-display text-[0.76rem] font-bold tracking-[0.1em] text-[#0a0f02] uppercase shadow-[0_14px_38px_-14px_rgba(201,251,69,.85)] transition-all duration-400 hover:-translate-y-0.5 hover:shadow-[0_20px_46px_-14px_rgba(201,251,69,.9)] active:translate-y-0 active:scale-[0.97] sm:pr-5"
+        className="group flex items-center gap-2.5 rounded-full bg-brand py-3.5 pr-4 pl-4 font-display text-[0.76rem] font-bold tracking-[0.1em] text-white uppercase shadow-[0_14px_38px_-14px_rgba(227,6,19,.85)] transition-all duration-400 hover:-translate-y-0.5 hover:shadow-[0_20px_46px_-14px_rgba(227,6,19,.95)] active:translate-y-0 active:scale-[0.97] sm:pr-5"
       >
         <WhatsAppIcon size={20} />
         <span className="hidden sm:inline">Falar no WhatsApp</span>

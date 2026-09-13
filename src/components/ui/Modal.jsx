@@ -81,7 +81,7 @@ export function Modal({ open, onClose, labelledBy, children, maxWidth = '860px' 
           type="button"
           onClick={onClose}
           aria-label="Fechar janela"
-          className="absolute top-3.5 right-3.5 z-20 grid h-10 w-10 place-items-center rounded-full border border-white/15 bg-black/55 text-white backdrop-blur-md transition hover:border-volt hover:text-volt"
+          className="absolute top-3.5 right-3.5 z-20 grid h-10 w-10 place-items-center rounded-full border border-white/15 bg-black/55 text-white backdrop-blur-md transition hover:border-brand-light hover:text-brand-light"
         >
           <X size={18} aria-hidden="true" />
         </button>

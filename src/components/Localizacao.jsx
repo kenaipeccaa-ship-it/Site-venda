@@ -17,7 +17,7 @@ export function Localizacao() {
               eyebrow="Localização"
               title={
                 <>
-                  Onde <span className="volt-text">estamos</span>
+                  Onde <span className="brand-text">estamos</span>
                 </>
               }
             />
@@ -37,8 +37,8 @@ export function Localizacao() {
               </div>
 
               {/* ⚠️ ENDEREÇO NÃO CONFIRMADO — marcador mantido de propósito. */}
-              <div className="card flex flex-col gap-2.5 border-dashed border-volt/35 bg-volt/[0.04] p-5">
-                <span className="font-display text-[0.62rem] font-bold tracking-[0.2em] text-volt uppercase">
+              <div className="card flex flex-col gap-2.5 border-dashed border-brand-light/35 bg-brand-light/[0.04] p-5">
+                <span className="font-display text-[0.62rem] font-bold tracking-[0.2em] text-brand-light uppercase">
                   Endereço
                 </span>
                 <p className="font-mono text-[0.82rem] leading-relaxed break-words text-[#c3cbd6]">
@@ -103,17 +103,17 @@ export function Localizacao() {
                       height: '60%',
                       left: '20%',
                       top: '20%',
-                      background: 'rgba(201,251,69,.10)',
+                      background: 'rgba(255,36,54,.10)',
                     }}
                   />
-                  <span className="float-y relative grid h-16 w-16 place-items-center rounded-2xl border border-volt/30 bg-volt/10 text-volt">
+                  <span className="float-y relative grid h-16 w-16 place-items-center rounded-2xl border border-brand-light/30 bg-brand-light/10 text-brand-light">
                     <MapPin size={28} aria-hidden="true" />
                   </span>
                   <div className="relative flex flex-col gap-2.5">
                     <p className="display text-[1.05rem] sm:text-[1.2rem]">
                       Espaço reservado para o mapa
                     </p>
-                    <p className="mx-auto max-w-[34ch] font-mono text-[0.78rem] leading-relaxed text-volt/90">
+                    <p className="mx-auto max-w-[34ch] font-mono text-[0.78rem] leading-relaxed text-brand-light/90">
                       {site.addressPlaceholder}
                     </p>
                     <p className="mx-auto max-w-[44ch] text-[0.8rem] leading-relaxed text-fog">
@@ -127,7 +127,7 @@ export function Localizacao() {
             </div>
 
             <div className="mt-4 flex items-start gap-3 rounded-2xl border border-line bg-surface p-4">
-              <Info size={16} className="mt-0.5 shrink-0 text-volt" aria-hidden="true" />
+              <Info size={16} className="mt-0.5 shrink-0 text-brand-light" aria-hidden="true" />
               <p className="text-[0.8rem] leading-relaxed text-fog">
                 Nenhum endereço, telefone ou horário foi inventado nesta demonstração. Todos os
                 campos estão preparados para receber as informações oficiais da unidade.

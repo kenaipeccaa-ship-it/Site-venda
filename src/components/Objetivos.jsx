@@ -18,7 +18,7 @@ export function Objetivos() {
           eyebrow="Objetivos"
           title={
             <>
-              Qual é o seu <span className="volt-text">objetivo</span>?
+              Qual é o seu <span className="brand-text">objetivo</span>?
             </>
           }
           description="O ponto de partida muda de pessoa para pessoa. O treino é organizado a partir do que você quer construir."

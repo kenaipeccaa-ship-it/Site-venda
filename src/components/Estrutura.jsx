@@ -17,7 +17,7 @@ export function Estrutura() {
             <>
               Um espaço para
               <br />
-              você <span className="volt-text">evoluir</span>
+              você <span className="brand-text">evoluir</span>
             </>
           }
           description="Áreas de musculação, cardio e aulas coletivas organizadas para que cada treino tenha o seu lugar."
@@ -72,7 +72,7 @@ export function Estrutura() {
                         {item.legenda}
                       </p>
                     </div>
-                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl border border-white/15 bg-black/50 text-volt backdrop-blur-md">
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl border border-white/15 bg-black/50 text-brand-light backdrop-blur-md">
                       <Icon name={item.icon} size={16} />
                     </span>
                   </div>
@@ -87,7 +87,7 @@ export function Estrutura() {
           className="mt-8 flex flex-col gap-5 rounded-2xl border border-line bg-surface p-6 sm:flex-row sm:items-center sm:justify-between sm:p-7"
         >
           <div className="flex items-start gap-3">
-            <ImageOff size={18} className="mt-0.5 shrink-0 text-volt" aria-hidden="true" />
+            <ImageOff size={18} className="mt-0.5 shrink-0 text-brand-light" aria-hidden="true" />
             <p className="max-w-[62ch] text-[0.85rem] leading-relaxed text-[#c3cbd6]">
               <strong className="font-semibold text-white">Imagens ilustrativas.</strong> Esta
               demonstração usa fotos genéricas de banco de imagens como espaço reservado. Na versão

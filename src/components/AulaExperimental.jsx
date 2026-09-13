@@ -109,7 +109,7 @@ export function AulaExperimental() {
             height: 'min(70vw, 560px)',
             right: '-10%',
             bottom: '-18%',
-            background: 'rgba(201,251,69,.14)',
+            background: 'rgba(255,36,54,.14)',
           }}
         />
       </div>
@@ -123,7 +123,7 @@ export function AulaExperimental() {
             </Reveal>
 
             <Reveal as="h2" delay={60} id="experimental-titulo" className="display t-section mt-5">
-              Venha <span className="volt-text">conhecer</span>
+              Venha <span className="brand-text">conhecer</span>
             </Reveal>
 
             <Reveal as="p" delay={130} className="lead mt-6 max-w-[48ch] sm:text-[1.18rem]">
@@ -148,7 +148,7 @@ export function AulaExperimental() {
                 'Condições e regras da aula experimental: consulte a unidade',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
-                  <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-volt/15 text-volt">
+                  <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-light/15 text-brand-light">
                     <Check size={12} strokeWidth={3} aria-hidden="true" />
                   </span>
                   <span className="text-[0.9rem] leading-relaxed text-[#c3cbd6]">{item}</span>
@@ -316,7 +316,7 @@ export function AulaExperimental() {
                   className="flex flex-col items-center gap-5 p-8 text-center sm:p-10"
                   style={{ animation: 'fadeUpIn .45s var(--ease-out-soft) both' }}
                 >
-                  <span className="grid h-16 w-16 place-items-center rounded-2xl border border-volt/35 bg-volt/12 text-volt">
+                  <span className="grid h-16 w-16 place-items-center rounded-2xl border border-brand-light/35 bg-brand-light/12 text-brand-light">
                     <Check size={30} strokeWidth={2.6} aria-hidden="true" />
                   </span>
 

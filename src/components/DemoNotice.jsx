@@ -11,7 +11,7 @@ export function DemoNotice() {
   return (
     <div
       role="note"
-      className="border-b border-volt/20 bg-[#0c1006]/95 text-volt backdrop-blur-xl"
+      className="border-b border-brand-light/20 bg-[#140406]/95 text-brand-light backdrop-blur-xl"
     >
       <div className="shell flex items-center justify-center gap-2.5 py-2 text-center">
         <Info size={13} className="hidden shrink-0 sm:block" aria-hidden="true" />

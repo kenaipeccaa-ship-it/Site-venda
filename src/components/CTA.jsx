@@ -34,7 +34,7 @@ export function CTA() {
             left: '50%',
             top: '10%',
             transform: 'translateX(-50%)',
-            background: 'rgba(201,251,69,.15)',
+            background: 'rgba(255,36,54,.15)',
           }}
         />
       </div>
@@ -49,7 +49,7 @@ export function CTA() {
           <br />
           Seu treino.
           <br />
-          <span className="volt-text">Seu próximo nível.</span>
+          <span className="brand-text">Seu próximo nível.</span>
         </Reveal>
 
         <Reveal as="p" delay={150} className="lead mt-6 max-w-[44ch] sm:text-[1.15rem]">

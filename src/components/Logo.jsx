@@ -10,18 +10,18 @@ export function Logo({ compact = false }) {
       {/* Marca gráfica própria: barra ascendente = progressão */}
       <span
         aria-hidden="true"
-        className="grid h-9 w-9 shrink-0 place-items-center rounded-[11px] border border-line bg-gradient-to-br from-volt/25 to-transparent sm:h-10 sm:w-10"
+        className="grid h-9 w-9 shrink-0 place-items-center rounded-[11px] border border-line bg-gradient-to-br from-brand-light/25 to-transparent sm:h-10 sm:w-10"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
           <path
             d="M4 17.5 L11 10 L14.5 13.5 L20 6.5"
-            stroke="#c9fb45"
+            stroke="#ff2436"
             strokeWidth="2.6"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <circle cx="4" cy="17.5" r="1.9" fill="#f4f6f8" />
-          <circle cx="20" cy="6.5" r="1.9" fill="#c9fb45" />
+          <circle cx="20" cy="6.5" r="1.9" fill="#ff2436" />
         </svg>
       </span>
 

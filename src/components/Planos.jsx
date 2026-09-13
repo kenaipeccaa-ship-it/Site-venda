@@ -19,7 +19,7 @@ export function Planos() {
           eyebrow="Planos"
           title={
             <>
-              Escolha seu <span className="volt-text">plano</span>
+              Escolha seu <span className="brand-text">plano</span>
             </>
           }
           description="Três formatos pensados para momentos diferentes de treino. Valores e condições são informados diretamente pela unidade."
@@ -35,14 +35,14 @@ export function Planos() {
               variant="reveal-scale"
               className={`card card-hover group/card relative flex flex-col overflow-hidden p-6 sm:p-7 ${
                 plano.destaque
-                  ? 'border-volt/45 bg-gradient-to-b from-volt/[0.07] to-transparent lg:-mt-4 lg:mb-4 lg:shadow-[0_30px_80px_-40px_rgba(201,251,69,.30)]'
+                  ? 'border-brand-light/45 bg-gradient-to-b from-brand-light/[0.07] to-transparent lg:-mt-4 lg:mb-4 lg:shadow-[0_30px_80px_-40px_rgba(255,36,54,.30)]'
                   : ''
               }`}
             >
               {/* Etiqueta puramente visual: NÃO afirma popularidade nem número de
                   contratações — nenhum dado desse tipo foi inventado. */}
               {plano.destaque && (
-                <span className="absolute top-0 right-0 rounded-bl-2xl bg-volt px-4 py-1.5 font-display text-[0.6rem] font-bold tracking-[0.18em] text-[#0a0f02] uppercase">
+                <span className="absolute top-0 right-0 rounded-bl-2xl bg-brand px-4 py-1.5 font-display text-[0.6rem] font-bold tracking-[0.18em] text-white uppercase">
                   Destaque
                 </span>
               )}
@@ -61,7 +61,7 @@ export function Planos() {
                     Investimento
                   </span>
                   {/* ⚠️ NENHUM PREÇO É INVENTADO — o valor sempre remete à unidade. */}
-                  <p className="display mt-2 text-[1.25rem] leading-tight text-volt sm:text-[1.4rem]">
+                  <p className="display mt-2 text-[1.25rem] leading-tight text-brand-light sm:text-[1.4rem]">
                     {plano.preco}
                   </p>
                 </div>
@@ -70,7 +70,7 @@ export function Planos() {
               <ul className="flex flex-1 flex-col gap-3">
                 {plano.itens.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
-                    <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-volt/15 text-volt">
+                    <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-light/15 text-brand-light">
                       <Check size={12} strokeWidth={3} aria-hidden="true" />
                     </span>
                     <span className="text-[0.87rem] leading-relaxed text-[#c3cbd6]">{item}</span>
@@ -96,7 +96,7 @@ export function Planos() {
           delay={120}
           className="mx-auto mt-8 flex max-w-3xl items-start gap-3 rounded-2xl border border-line bg-surface p-5 sm:mt-10"
         >
-          <Info size={18} className="mt-0.5 shrink-0 text-volt" aria-hidden="true" />
+          <Info size={18} className="mt-0.5 shrink-0 text-brand-light" aria-hidden="true" />
           <p className="text-[0.85rem] leading-relaxed text-[#c3cbd6]">
             <strong className="font-semibold text-white">Sem valores nesta demonstração.</strong>{' '}
             Preços, benefícios, vigência e condições de cada plano devem ser confirmados com a

@@ -54,7 +54,7 @@ export function Hero() {
             height: 'min(70vw, 620px)',
             left: '-14%',
             bottom: '-22%',
-            background: 'rgba(201,251,69,.16)',
+            background: 'rgba(255,36,54,.16)',
             animation: 'softPulse 9s ease-in-out infinite',
           }}
         />
@@ -63,10 +63,10 @@ export function Hero() {
       <div className="shell relative flex min-h-[100svh] flex-col justify-end pt-[132px] pb-8 sm:min-h-[92svh] sm:justify-center sm:pt-[150px] sm:pb-[132px] lg:min-h-[100svh]">
         <div className="max-w-[64rem]">
           <Reveal as="div" className="mb-6 flex flex-wrap items-center gap-2.5">
-            <span className="chip border-volt/35 bg-volt/10 text-volt">
+            <span className="chip border-brand-light/35 bg-brand-light/10 text-brand-light">
               <span
                 aria-hidden="true"
-                className="h-1.5 w-1.5 rounded-full bg-volt"
+                className="h-1.5 w-1.5 rounded-full bg-brand-light"
                 style={{ animation: 'softPulse 2.4s ease-in-out infinite' }}
               />
               <span className="hidden sm:inline">Academia · </span>
@@ -78,7 +78,7 @@ export function Hero() {
           <Reveal as="h1" delay={80} id="hero-titulo" className="display t-hero">
             Seu próximo nível
             <br />
-            <span className="volt-text">começa aqui.</span>
+            <span className="brand-text">começa aqui.</span>
           </Reveal>
 
           <Reveal as="p" delay={180} className="lead mt-6 max-w-[46ch] sm:mt-7 sm:text-[1.2rem]">
@@ -102,7 +102,7 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={340} className="mt-8 flex items-center gap-2.5 sm:mt-9">
-            <MapPin size={17} className="shrink-0 text-volt" aria-hidden="true" />
+            <MapPin size={17} className="shrink-0 text-brand-light" aria-hidden="true" />
             <p className="text-[0.9rem] font-medium text-[#c3cbd6]">
               {site.addressShort}
               <span className="block text-[0.78rem] text-fog sm:ml-2 sm:inline">
@@ -121,7 +121,7 @@ export function Hero() {
             Role para ver
           </span>
           <span className="relative h-12 w-[1px] bg-line">
-            <span className="scroll-hint-dot absolute top-0 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-volt" />
+            <span className="scroll-hint-dot absolute top-0 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-brand-light" />
           </span>
         </div>
       </div>
@@ -140,7 +140,7 @@ export function Hero() {
                     <span className="font-display text-[0.78rem] font-bold tracking-[0.26em] whitespace-nowrap text-[#dfe4ea] uppercase sm:text-[0.92rem]">
                       {item.word}
                     </span>
-                    <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rotate-45 bg-volt" />
+                    <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-light" />
                   </li>
                 ))}
               </ul>

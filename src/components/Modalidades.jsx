@@ -42,7 +42,7 @@ export function Modalidades() {
           height: 'min(60vw, 520px)',
           right: '-12%',
           top: '6%',
-          background: 'rgba(86,220,255,.10)',
+          background: 'rgba(255,36,54,.10)',
         }}
       />
 
@@ -54,7 +54,7 @@ export function Modalidades() {
             <>
               Escolha como você
               <br />
-              quer <span className="volt-text">treinar</span>
+              quer <span className="brand-text">treinar</span>
             </>
           }
           description="Musculação e aulas coletivas em um mesmo lugar. Toque em uma modalidade para ver os detalhes."
@@ -78,8 +78,8 @@ export function Modalidades() {
                   onClick={() => setFiltro(tag)}
                   className={`rounded-full border px-4 py-2 font-display text-[0.72rem] font-bold tracking-[0.12em] uppercase transition-all duration-300 ${
                     ativo
-                      ? 'border-volt bg-volt text-[#0a0f02]'
-                      : 'border-line bg-white/[0.03] text-[#b6bec9] hover:border-volt/50 hover:text-white'
+                      ? 'border-brand bg-brand text-white'
+                      : 'border-line bg-white/[0.03] text-[#b6bec9] hover:border-brand-light/50 hover:text-white'
                   }`}
                 >
                   {tag}
@@ -133,7 +133,7 @@ export function Modalidades() {
                 <button
                   type="button"
                   onClick={() => setAberta(m)}
-                  className="btn btn-ghost mt-auto self-start px-0 text-volt hover:bg-transparent"
+                  className="btn btn-ghost mt-auto self-start px-0 text-brand-light hover:bg-transparent"
                   aria-label={`Saiba mais sobre ${m.nome}`}
                 >
                   <span>Saiba mais</span>
@@ -147,9 +147,9 @@ export function Modalidades() {
         {/* ---------- Aviso de conteúdo a confirmar ---------- */}
         <Reveal
           delay={120}
-          className="mt-8 flex items-start gap-3 rounded-2xl border border-volt/20 bg-volt/[0.055] p-5 sm:mt-10"
+          className="mt-8 flex items-start gap-3 rounded-2xl border border-brand-light/20 bg-brand-light/[0.055] p-5 sm:mt-10"
         >
-          <Info size={18} className="mt-0.5 shrink-0 text-volt" aria-hidden="true" />
+          <Info size={18} className="mt-0.5 shrink-0 text-brand-light" aria-hidden="true" />
           <p className="text-[0.85rem] leading-relaxed text-[#c3cbd6]">
             <strong className="font-semibold text-white">Conteúdo de demonstração.</strong> As
             modalidades acima foram usadas para montar esta apresentação e estão em uma estrutura
@@ -186,7 +186,7 @@ export function Modalidades() {
                   <Icon name={aberta.icon} size={23} />
                 </span>
                 <div>
-                  <span className="font-display text-[0.6rem] font-bold tracking-[0.24em] text-volt uppercase">
+                  <span className="font-display text-[0.6rem] font-bold tracking-[0.24em] text-brand-light uppercase">
                     {aberta.tag}
                   </span>
                   <h3
@@ -209,7 +209,7 @@ export function Modalidades() {
                 <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
                   {aberta.topicos.map((t) => (
                     <li key={t} className="flex items-start gap-2.5">
-                      <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-volt/15 text-volt">
+                      <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-light/15 text-brand-light">
                         <Check size={12} strokeWidth={3} aria-hidden="true" />
                       </span>
                       <span className="text-[0.88rem] leading-relaxed text-[#c3cbd6]">{t}</span>
@@ -219,7 +219,7 @@ export function Modalidades() {
               </div>
 
               <div className="rounded-2xl border border-line bg-white/[0.025] p-5">
-                <span className="font-display text-[0.62rem] font-bold tracking-[0.2em] text-volt uppercase">
+                <span className="font-display text-[0.62rem] font-bold tracking-[0.2em] text-brand-light uppercase">
                   Indicado para
                 </span>
                 <p className="mt-2 text-[0.9rem] leading-relaxed text-[#c3cbd6]">

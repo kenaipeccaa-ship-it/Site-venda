@@ -33,7 +33,7 @@ export function SmartImage({
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(120% 120% at 20% 0%, rgba(201,251,69,0.10), transparent 55%), linear-gradient(150deg,#141922,#0a0c11)',
+            'radial-gradient(120% 120% at 20% 0%, rgba(255,36,54,0.10), transparent 55%), linear-gradient(150deg,#141922,#0a0c11)',
         }}
       />
 
@@ -55,7 +55,7 @@ export function SmartImage({
 
       {status === 'error' && (
         <div className="relative flex h-full w-full flex-col items-center justify-center gap-3 p-6 text-center">
-          <span className="grid h-12 w-12 place-items-center rounded-2xl border border-line bg-white/5 text-volt">
+          <span className="grid h-12 w-12 place-items-center rounded-2xl border border-line bg-white/5 text-brand-light">
             <Icon name={icon} size={22} />
           </span>
           <span className="max-w-[26ch] font-display text-[0.68rem] font-bold tracking-[0.16em] text-fog uppercase">

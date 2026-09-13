@@ -23,7 +23,7 @@ export function Footer() {
             </p>
 
             <div className="flex items-center gap-2.5">
-              <MapPin size={15} className="shrink-0 text-volt" aria-hidden="true" />
+              <MapPin size={15} className="shrink-0 text-brand-light" aria-hidden="true" />
               <span className="text-[0.85rem] text-[#c3cbd6]">{site.addressShort}</span>
             </div>
 
@@ -50,7 +50,7 @@ export function Footer() {
                 </a>
               ) : (
                 <span
-                  className="chip border-dashed border-volt/30 text-volt/80"
+                  className="chip border-dashed border-brand-light/30 text-brand-light/80"
                   title="Adicione o link em src/config/site.js → site.instagram"
                 >
                   <InstagramIcon size={14} />
@@ -73,7 +73,7 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="group inline-flex items-center gap-1.5 text-[0.88rem] text-[#c3cbd6] transition-colors hover:text-volt"
+                    className="group inline-flex items-center gap-1.5 text-[0.88rem] text-[#c3cbd6] transition-colors hover:text-brand-light"
                   >
                     {link.label}
                     <ArrowUpRight
@@ -98,14 +98,14 @@ export function Footer() {
                 <span className="text-[0.7rem] tracking-[0.14em] text-fog uppercase">WhatsApp</span>
                 <span className="text-[#c3cbd6]">
                   {WHATSAPP_IS_PLACEHOLDER ? (
-                    <span className="font-mono text-[0.8rem] text-volt/90">
+                    <span className="font-mono text-[0.8rem] text-brand-light/90">
                       número a definir (placeholder)
                     </span>
                   ) : (
                     <a
                       href={waLink(waMessages.geral)}
                       {...waAnchorProps}
-                      className="transition-colors hover:text-volt"
+                      className="transition-colors hover:text-brand-light"
                     >
                       +{WHATSAPP_NUMBER}
                     </a>
@@ -114,7 +114,7 @@ export function Footer() {
               </li>
               <li className="flex flex-col gap-1">
                 <span className="text-[0.7rem] tracking-[0.14em] text-fog uppercase">Endereço</span>
-                <span className="font-mono text-[0.78rem] leading-relaxed break-words text-volt/90">
+                <span className="font-mono text-[0.78rem] leading-relaxed break-words text-brand-light/90">
                   {site.addressPlaceholder}
                 </span>
               </li>
@@ -138,10 +138,10 @@ export function Footer() {
             {ano}
           </p>
 
-          <p className="flex items-center gap-2 text-[0.78rem] font-medium text-volt/90">
+          <p className="flex items-center gap-2 text-[0.78rem] font-medium text-brand-light/90">
             <span
               aria-hidden="true"
-              className="h-1.5 w-1.5 shrink-0 rounded-full bg-volt"
+              className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand-light"
             />
             Demonstração de conceito — projeto independente.
           </p>

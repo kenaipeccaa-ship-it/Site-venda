@@ -15,7 +15,7 @@ export function Features() {
               <>
                 Mais do que
                 <br />
-                uma <span className="volt-text">academia</span>
+                uma <span className="brand-text">academia</span>
               </>
             }
             description="Uma proposta de treino construída em torno do ambiente, da variedade de estímulos e da constância — para que cada pessoa encontre o seu próprio caminho de evolução."
@@ -58,7 +58,7 @@ export function Features() {
 
               <span
                 aria-hidden="true"
-                className="mt-auto h-[2px] w-8 origin-left rounded-full bg-volt transition-transform duration-500 group-hover/card:scale-x-[2.6]"
+                className="mt-auto h-[2px] w-8 origin-left rounded-full bg-brand-light transition-transform duration-500 group-hover/card:scale-x-[2.6]"
               />
             </Reveal>
           ))}

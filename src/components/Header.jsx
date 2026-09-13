@@ -68,13 +68,13 @@ export function Header() {
                         href={link.href}
                         aria-current={isActive ? 'true' : undefined}
                         className={`relative block rounded-full px-3.5 py-2 text-[0.82rem] font-medium transition-colors duration-300 xl:px-4 ${
-                          isActive ? 'text-volt' : 'text-[#c3cbd6] hover:text-white'
+                          isActive ? 'text-brand-light' : 'text-[#c3cbd6] hover:text-white'
                         }`}
                       >
                         {link.label}
                         <span
                           aria-hidden="true"
-                          className={`absolute inset-x-3.5 -bottom-0.5 h-[2px] origin-left rounded-full bg-volt transition-transform duration-400 ${
+                          className={`absolute inset-x-3.5 -bottom-0.5 h-[2px] origin-left rounded-full bg-brand-light transition-transform duration-400 ${
                             isActive ? 'scale-x-100' : 'scale-x-0'
                           }`}
                         />
@@ -102,7 +102,7 @@ export function Header() {
                 aria-expanded={menuOpen}
                 aria-controls="menu-mobile"
                 aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
-                className="grid h-11 w-11 place-items-center rounded-full border border-line bg-white/5 text-white transition-colors hover:border-volt hover:text-volt lg:hidden"
+                className="grid h-11 w-11 place-items-center rounded-full border border-line bg-white/5 text-white transition-colors hover:border-brand-light hover:text-brand-light lg:hidden"
               >
                 {menuOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
               </button>
@@ -124,7 +124,7 @@ export function Header() {
                   <a
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="flex items-center justify-between gap-4 py-3.5 font-display text-[1.02rem] font-bold tracking-[-0.01em] text-white uppercase transition-colors hover:text-volt"
+                    className="flex items-center justify-between gap-4 py-3.5 font-display text-[1.02rem] font-bold tracking-[-0.01em] text-white uppercase transition-colors hover:text-brand-light"
                   >
                     {link.label}
                     <span className="font-sans text-[0.7rem] font-medium tracking-widest text-fog">

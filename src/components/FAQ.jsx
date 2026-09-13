@@ -24,7 +24,7 @@ export function FAQ() {
               titleClassName="text-[clamp(1.9rem,5vw,2.9rem)]"
               title={
                 <>
-                  Perguntas <span className="volt-text">frequentes</span>
+                  Perguntas <span className="brand-text">frequentes</span>
                 </>
               }
               description="Quando a informação ainda não está confirmada, a resposta remete diretamente à unidade — nunca a uma suposição."
@@ -47,7 +47,7 @@ export function FAQ() {
                   <li
                     key={item.q}
                     className={`card overflow-hidden transition-colors duration-400 ${
-                      open ? 'border-volt/40 bg-surface-2' : ''
+                      open ? 'border-brand-light/40 bg-surface-2' : ''
                     }`}
                   >
                     <h3>
@@ -61,7 +61,7 @@ export function FAQ() {
                       >
                         <span
                           className={`font-display text-[0.98rem] font-bold tracking-[-0.01em] transition-colors duration-300 sm:text-[1.08rem] ${
-                            open ? 'text-volt' : 'text-white'
+                            open ? 'text-brand-light' : 'text-white'
                           }`}
                         >
                           {item.q}
@@ -70,7 +70,7 @@ export function FAQ() {
                           aria-hidden="true"
                           className={`mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full border transition-all duration-400 ${
                             open
-                              ? 'rotate-[135deg] border-volt bg-volt text-[#0a0f02]'
+                              ? 'rotate-[135deg] border-brand bg-brand text-white'
                               : 'border-line text-fog'
                           }`}
                         >
