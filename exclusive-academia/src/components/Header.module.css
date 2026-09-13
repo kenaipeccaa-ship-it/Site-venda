@@ -1,0 +1,272 @@
+.skip {
+  min-height: 44px;
+  padding: 10px 18px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 120;
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 0.45s var(--ease),
+    border-color 0.45s var(--ease),
+    backdrop-filter 0.45s var(--ease);
+}
+
+/* fundo azul-marinho ao rolar (e com o menu mobile aberto) */
+.solid {
+  background: rgba(7, 17, 31, 0.92);
+  border-bottom-color: var(--hairline);
+  backdrop-filter: blur(14px);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  height: 72px;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    height: 88px;
+  }
+}
+
+/* ---------- Logotipo: duas linhas separadas por um fio ---------- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: none;
+  min-height: 44px;
+  transition: opacity 0.3s var(--ease);
+}
+
+.logo:hover {
+  opacity: 0.75;
+}
+
+.logoMain {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--white);
+}
+
+.logoRule {
+  width: 1px;
+  height: 22px;
+  background: var(--accent);
+  flex: none;
+}
+
+.logoSub {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: var(--muted);
+  padding-top: 2px;
+}
+
+@media (min-width: 480px) {
+  .logoMain {
+    font-size: 1.16rem;
+  }
+  .logoSub {
+    font-size: 0.64rem;
+  }
+}
+
+/* ---------- Navegação desktop ---------- */
+.nav {
+  display: none;
+}
+
+@media (min-width: 1080px) {
+  .nav {
+    display: block;
+  }
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navLink {
+  position: relative;
+  display: block;
+  padding: 10px 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.3s var(--ease);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 2px;
+  height: 1px;
+  background: var(--accent-bright);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+
+.navLink:hover {
+  color: var(--white);
+}
+
+.navLink:hover::after,
+.navLinkActive::after {
+  transform: scaleX(1);
+}
+
+.navLinkActive {
+  color: var(--white);
+}
+
+/* ---------- Ações ---------- */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: none;
+}
+
+.cta {
+  display: none;
+  min-height: 44px;
+  padding: 11px 20px;
+  font-size: 0.7rem;
+}
+
+@media (min-width: 560px) {
+  .cta {
+    display: inline-flex;
+  }
+}
+
+.burger {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 3px;
+  color: var(--white);
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.burger:hover {
+  border-color: var(--accent-bright);
+  color: var(--accent-bright);
+}
+
+@media (min-width: 1080px) {
+  .burger {
+    display: none;
+  }
+}
+
+/* ---------- Menu mobile ---------- */
+.drawer {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 110;
+  background: var(--navy-900);
+  border-top: 1px solid var(--hairline);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  animation: fadeIn 0.28s ease both;
+}
+
+.drawer[hidden] {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .drawer {
+    top: 88px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .drawer {
+    display: none;
+  }
+}
+
+.drawerInner {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-block: 28px 40px;
+}
+
+.drawerList {
+  display: flex;
+  flex-direction: column;
+}
+
+.drawerItem {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.drawerLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 2px;
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+  transition: color 0.3s var(--ease), padding-left 0.3s var(--ease);
+}
+
+.drawerLink:hover {
+  color: var(--accent-bright);
+  padding-left: 8px;
+}
+
+.drawerIndex {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--accent-bright);
+  flex: none;
+}
+
+.drawerArrow {
+  margin-left: auto;
+  color: var(--muted);
+  flex: none;
+}
+
+.drawerFoot {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.9;
+}

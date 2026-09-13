@@ -1,3 +1,14 @@
+> **Este repositório tem dois projetos independentes:**
+>
+> | Projeto | Pasta | Como rodar |
+> | --- | --- | --- |
+> | SkyFit Satélite Íris (demonstração) | raiz do repositório | `npm run dev` |
+> | Exclusive Academia | `exclusive-academia/` | `cd exclusive-academia && npm run dev` |
+>
+> O README abaixo é do projeto **SkyFit**.
+
+---
+
 # SkyFit Satélite Íris — Demonstração de site para academia
 
 > ⚠️ **Demonstração de conceito — projeto independente.**

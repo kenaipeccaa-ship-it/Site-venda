@@ -1,0 +1,91 @@
+.section {
+  background: var(--navy-900);
+}
+
+.inner {
+  display: grid;
+  gap: 40px;
+}
+
+/* Composição assimétrica 55/45 a partir do desktop */
+@media (min-width: 960px) {
+  .inner {
+    grid-template-columns: minmax(0, 1.18fr) minmax(0, 1fr);
+    gap: 72px;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inner {
+    gap: 104px;
+  }
+}
+
+.media {
+  position: relative;
+}
+
+/* moldura deslocada — mesmo recurso do hero, reforça a linguagem */
+.frame {
+  position: absolute;
+  inset: -16px 16px 16px -16px;
+  border: 1px solid var(--accent);
+  pointer-events: none;
+}
+
+@media (min-width: 960px) {
+  .frame {
+    inset: -26px 26px 26px -26px;
+  }
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+}
+
+@media (min-width: 960px) {
+  .image {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--white);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: clamp(0.98rem, 1.9vw, 1.08rem);
+  line-height: 1.75;
+  max-width: 54ch;
+}
+
+.marks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.mark {
+  padding: 9px 16px;
+  border: 1px solid var(--hairline);
+  border-radius: 2px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mist);
+}

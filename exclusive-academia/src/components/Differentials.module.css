@@ -1,0 +1,65 @@
+.section {
+  background: var(--navy-900);
+  padding-block: clamp(56px, 7vw, 104px);
+}
+
+/* Fios finos formando a grade — sem cartões, bem minimalista */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--hairline);
+  border-left: 1px solid var(--hairline);
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px 18px;
+  border-right: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  transition: background-color 0.4s var(--ease);
+}
+
+@media (min-width: 1080px) {
+  .cell {
+    padding: 34px 22px;
+    min-height: 168px;
+  }
+}
+
+.cell:hover {
+  background: rgba(23, 105, 255, 0.07);
+}
+
+.icon {
+  color: var(--accent-bright);
+  flex: none;
+  transition: transform 0.45s var(--ease);
+}
+
+.cell:hover .icon {
+  transform: translateY(-3px);
+}
+
+.label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.45;
+  text-transform: uppercase;
+  color: var(--mist);
+}

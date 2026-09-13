@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Exclusive Academia">
+  <rect width="64" height="64" rx="6" fill="#07111f"/>
+  <rect x="1.25" y="1.25" width="61.5" height="61.5" rx="5" fill="none" stroke="#16304f" stroke-width="2.5"/>
+  <!-- monograma "E" construído com três barras e um fio azul elétrico -->
+  <rect x="17" y="16" width="5.5" height="32" fill="#ffffff"/>
+  <rect x="24.5" y="16" width="22" height="5.5" fill="#ffffff"/>
+  <rect x="24.5" y="29.25" width="16" height="5.5" fill="#1769ff"/>
+  <rect x="24.5" y="42.5" width="22" height="5.5" fill="#ffffff"/>
+</svg>

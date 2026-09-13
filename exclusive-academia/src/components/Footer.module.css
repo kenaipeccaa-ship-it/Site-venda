@@ -1,0 +1,181 @@
+.footer {
+  background: var(--navy-800);
+  border-top: 1px solid var(--hairline);
+}
+
+.inner {
+  display: grid;
+  gap: 40px;
+  padding-block: clamp(48px, 7vw, 84px) 40px;
+}
+
+@media (min-width: 640px) {
+  .inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 44px 32px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .inner {
+    grid-template-columns: minmax(0, 1.3fr) repeat(3, minmax(0, 1fr));
+    gap: 48px;
+  }
+}
+
+/* ---------- Marca ---------- */
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoMain {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--white);
+}
+
+.logoRule {
+  width: 1px;
+  height: 22px;
+  background: var(--accent);
+  flex: none;
+}
+
+.logoSub {
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: var(--muted);
+  padding-top: 2px;
+}
+
+.city {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+/* ---------- Colunas ---------- */
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.colTitle {
+  font-family: var(--font-display);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent-bright);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  /* área de toque confortável no celular (mínimo de 24px da WCAG 2.2) */
+  min-height: 32px;
+  font-size: 0.88rem;
+  color: var(--mist);
+  transition: color 0.3s var(--ease);
+}
+
+.link:hover {
+  color: var(--accent-bright);
+}
+
+.linkArrow {
+  opacity: 0;
+  transform: translateX(-3px);
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+  flex: none;
+}
+
+.link:hover .linkArrow {
+  opacity: 1;
+  transform: none;
+}
+
+.address {
+  font-style: normal;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.hours {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hourRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hourDay {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hourTime {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--white);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Base ---------- */
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-block: 22px 28px;
+  border-top: 1px solid var(--hairline);
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+@media (min-width: 560px) {
+  .bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.bottomCity {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+}
