@@ -29,14 +29,14 @@ export const WHATSAPP_IS_PLACEHOLDER = WHATSAPP_NUMBER === '5519000000000'
  * -------------------------------------------------------------------------- */
 export const site = {
   brand: 'SKYFIT',
-  unit: 'SATÉLITE ÍRIS',
+  unit: 'CAMPO GRANDE',
   city: 'Campinas/SP',
-  region: 'Satélite Íris',
+  region: 'Campo Grande',
   // Endereço completo NÃO confirmado — manter o marcador até a validação.
   addressPlaceholder: '[INSERIR MAPA/ENDEREÇO OFICIAL DA UNIDADE]',
-  addressShort: 'Satélite Íris — Campinas/SP',
+  addressShort: 'Campo Grande — Campinas/SP',
   // Link do Google Maps. Substituir pelo link oficial da unidade.
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Sat%C3%A9lite+%C3%8Dris%2C+Campinas+-+SP',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Campo+Grande%2C+Campinas+-+SP',
   // Iframe de mapa incorporado: deixar como `null` mantém o espaço reservado
   // com o marcador visual. Ao receber o endereço oficial, cole aqui a URL do
   // "Incorporar um mapa" do Google Maps.

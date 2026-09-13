@@ -2,14 +2,14 @@
 >
 > | Projeto | Pasta | Como rodar |
 > | --- | --- | --- |
-> | SkyFit Satélite Íris (demonstração) | raiz do repositório | `npm run dev` |
+> | SkyFit Campo Grande (demonstração) | raiz do repositório | `npm run dev` |
 > | Exclusive Academia | `exclusive-academia/` | `cd exclusive-academia && npm run dev` |
 >
 > O README abaixo é do projeto **SkyFit**.
 
 ---
 
-# SkyFit Satélite Íris — Demonstração de site para academia
+# SkyFit Campo Grande — Demonstração de site para academia
 
 > ⚠️ **Demonstração de conceito — projeto independente.**
 > Esta página **não é** um canal oficial da academia e **não foi publicada por ela**.
